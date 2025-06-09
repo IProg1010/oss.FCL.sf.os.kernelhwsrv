@@ -1,0 +1,124 @@
+kernel/eka/kernel/exstart.cpp 
+    -plat_priv.h 
+        -(./kernel/eka/include/memmodel/epoc/plat_priv.h)
+            - kernel/kern_priv.h
+                -(./kernel/eka/include/kernel/kern_priv.h)
+                    -kernel/kernel.h
+                        -(./kernel/eka/include/kernel/kernel.h)
+                            -kernel/klib.h
+                                -(./kernel/eka/include/kernel/klib.h)
+                                    -e32cmn.h - found
+                                    -u32std.h
+                                        -(./kernel/eka/include/u32std.h)
+                                            -e32cmn.h - found
+                                            -e32std.inl - found
+                                                -(./kernel/eka/include/u32std.inl)
+                                            -e32std_private.h
+                                                -(./kernel/eka/include/u32std.inl)
+                                                    -e32cmn.h - found
+                                                    -e32cmn_private.h - found
+                                    -nklib.h - found
+                                    -kernel/kbma.h
+                                        -(./kernel/eka/include/kernel/kbma.h)
+                                            -e32cmn.h - found
+                            -e32kpan.h
+                                -(./kernel/eka/include/e32kpan.h)
+                                    -e32def.h - found
+                            -u32std.h - found
+                            -e32ldr.h
+                                -(./kernel/eka/include/e32ldr.h)
+                            -e32ldr_private.h
+                                -(./kernel/eka/include/e32ldr_private.h)
+                                    -e32ldr.h - found
+                                    -e32cmn.h - found
+                                    -e32std.h - found
+                            e32event.h
+                                -(./kernel/eka/include/e32ldr_private.h)
+                                    -e32cmn.h - found
+                                    -e32btrace.h - found
+                                    -e32event_private.h - found
+                            e32event_private.h
+                                -(./kernel/eka/include/e32ldr_private.h)
+                                    -e32cmn.h
+                                    -e32cmn_private.h
+                            -d32locd.h
+                            -kernel/localise.h
+                            -nkern.h - found
+                            -kernel/sproperty.h
+                    -nk_priv.h
+                        -(./kernel/eka/include/nkernsmp/nk_priv.h)
+                            -cpudefs.h - found
+                                -(./kernel/eka/include/cpudefs.h)
+                            -nkern.h
+                                -(./kernel/eka/include/nkernsmp/nkern.h)
+                                    - e32const.h - found
+                                    - nklib.h 
+                                        -(./kernel/eka/include/nkernsmp/nklib.h)
+                                    - nk_event.h
+                                        -(./kernel/eka/include/nkernsmp/nk_event.h)
+                                    - dfcs.h
+                                        -(./kernel/eka/include/nkernsmp/dfcs.h)
+                                    - nk_trace.h
+                                        -(./kernel/eka/include/nkernsmp/nk_trace.h)
+                                    - e32atomics.h
+                                        -(./kernel/eka/include/e32atomics.h)
+                            -nk_plat.h
+                                -(./kernel/eka/include/nkernsmp/x86/nk_plat.h)
+                                -(./kernel/eka/include/nkernsmp/arm/nk_plat.h)
+                        -(./kernel/eka/include/nkern/nk_priv.h)
+                                ./kernel/eka/include/nkern/win32/nk_plat.h
+                                ./kernel/eka/include/nkern/x86/nk_plat.h
+                                ./kernel/eka/include/nkern/arm/nk_plat.h
+                    kernel/kpower.h
+                        -(./kernel/eka/include/kernel/kpower.h)
+                            -e32power.h
+                            -kernel/kernel.h
+                    platform.h -found
+                    e32uid.h -found
+                    kernel/kernboot.h - found
+                        -(./kernel/eka/include/kernel/kernboot.h)
+                    e32def_private.h - found
+                    e32const_private.h - found
+                    e32des8_private.h - found
+                        -(./kernel/eka/include/e32des8_private.h)
+                    e32event_private.h
+                        -(./kernel/eka/include/e32event_private.h)
+                            -e32cmn.h - found
+                            -e32cmn_private.h
+                                -e32const.h - found
+                                -e32const_private.h
+                                -e32des8.h
+                                -e32des8_private.h
+                                -e32des16.h
+                                -e32des16_private.h
+                    kernel/heap_hybrid.h
+                        -(./kernel/eka/include/heap_hybrid.h)
+                            -e32cmn.h - found
+            - platform.h
+                -(./kernel/eka/include/memmodel/epoc/platform.h)
+                -(./kernel/eka/include/memmodel/emul/platform.h)
+            - e32def_private.h
+                -(././kernel/eka/include/e32def_private.h)
+        -(./kernel/eka/include/memmodel/emul/plat_priv.h)
+    -e32uid.h
+        -(./kernel/eka/include/e32uid.h)
+            -e32cmn.h
+                -(./kernel/eka/include/e32cmn.h)
+                    -e32const.h
+                        -(./kernel/eka/include/e32const.h)
+                            -e32err.h
+                                -(./kernel/eka/include/e32err.h)
+                                    -e32def.h
+                                        -(./kernel/eka/include/e32def.h)
+                                            -e32def_private.h
+                                                -(./kernel/eka/include/e32def_private.h)
+                                    -e32def_private.h
+                                        -(./kernel/eka/include/e32def_private.h)
+                            -e32lang.h
+                                -(./kernel/eka/include/e32lang.h)
+                            -e32reg.h
+                                -(./kernel/eka/include/e32reg.h)
+                            -e32capability.h
+                                -(./kernel/eka/include/e32capability.h)
+                            -e32const_private.h
+                                -(./kernel/eka/include/e32const_private.h)

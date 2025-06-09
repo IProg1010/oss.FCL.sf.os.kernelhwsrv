@@ -1,0 +1,442 @@
+ARM Linker, RVCT2.2 [Build 686]
+
+================================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../../angel/rt.s                         0x00000000   Number         0  aeabi_idiv0.o ABSOLUTE
+    ../../angel/rt.s                         0x00000000   Number         0  aeabi_ldiv0.o ABSOLUTE
+    ../../arm_runtime.c                      0x00000000   Number         0  init.o ABSOLUTE
+    ../../bigflt.c                           0x00000000   Number         0  bigflt0.o ABSOLUTE
+    ../../btod.s                             0x00000000   Number         0  btod.o ABSOLUTE
+    ../../division.s                         0x00000000   Number         0  rtsdiv10.o ABSOLUTE
+    ../../division.s                         0x00000000   Number         0  aeabi_sdiv.o ABSOLUTE
+    ../../division.s                         0x00000000   Number         0  dspdiv32u.o ABSOLUTE
+    ../../division.s                         0x00000000   Number         0  dspdiv32.o ABSOLUTE
+    ../../division.s                         0x00000000   Number         0  divtest.o ABSOLUTE
+    ../../division.s                         0x00000000   Number         0  rt_sdiv.o ABSOLUTE
+    ../../division.s                         0x00000000   Number         0  rtudiv10.o ABSOLUTE
+    ../../division.s                         0x00000000   Number         0  dspdiv64.o ABSOLUTE
+    ../../division.s                         0x00000000   Number         0  rt_udiv.o ABSOLUTE
+    ../../heapalloc.c                        0x00000000   Number         0  hguard.o ABSOLUTE
+    ../../istatus.s                          0x00000000   Number         0  istatus.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  lladdls.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  lludiv5.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  lludiv10.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llsublu.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llmul.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llcmpge.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  lladd.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llmullu.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llnot.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  lladdss.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llsrdv.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llsubss.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llor.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llneg.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  lleor.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  lladduu.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llcmpu.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llsubuu.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llrsblu.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llrsbuu.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llrsb.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llmlauu.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llfroml.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  lland.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llfromu.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llrsbls.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llrsbss.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llsub.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  lladdlu.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llmulls.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llmuluu.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  lltol.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llmulss.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llurdv5.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llcmple.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llsubls.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llsdiv.o ABSOLUTE
+    ../../longlong.s                         0x00000000   Number         0  llmlass.o ABSOLUTE
+    ../../memcpset.s                         0x00000000   Number         0  rt_memcpy.o ABSOLUTE
+    ../../memcpset.s                         0x00000000   Number         0  rt_memcpy_w.o ABSOLUTE
+    ../../memcpset.s                         0x00000000   Number         0  rt_memclr.o ABSOLUTE
+    ../../memcpset.s                         0x00000000   Number         0  rt_memmove_w.o ABSOLUTE
+    ../../memcpset.s                         0x00000000   Number         0  rt_memclr_w.o ABSOLUTE
+    ../../memcpset.s                         0x00000000   Number         0  rt_memset.o ABSOLUTE
+    ../../stdlib.c                           0x00000000   Number         0  div.o ABSOLUTE
+    ../../stdlib.c                           0x00000000   Number         0  llabs.o ABSOLUTE
+    ../../stdlib.c                           0x00000000   Number         0  ldiv.o ABSOLUTE
+    ../../stdlib.c                           0x00000000   Number         0  abs.o ABSOLUTE
+    ../../stdlib.c                           0x00000000   Number         0  lldiv.o ABSOLUTE
+    ../../unhosted.s                         0x00000000   Number         0  switch8.o ABSOLUTE
+    E:/build_e/MSF00428_Symbian_OS_vTB101SF/epoc32/build/compsupp/c_e6d93ac3ff59be8b/drtrvct2_2_vfpv2_dll/armv6/drtrvct2_2_vfpv2{000a0000}.s 0x00000000   Number         0  drtrvct2_2_vfpv2{000a0000}.exp ABSOLUTE
+    E:\Synergy\kernelhwsrv\kernel\eka\compsupp\rvct\dllexp.cpp 0x00000000   Number         0  dllexp.o ABSOLUTE
+    E:\Synergy\kernelhwsrv\kernel\eka\compsupp\rvct\no_extras.cpp 0x00000000   Number         0  no_extras.o ABSOLUTE
+    E:\Synergy\kernelhwsrv\kernel\eka\compsupp\rvct\rtabort.cpp 0x00000000   Number         0  rtabort.o ABSOLUTE
+    E:\Synergy\kernelhwsrv\kernel\eka\compsupp\rvct\rtdiv0.cpp 0x00000000   Number         0  rtdiv0.o ABSOLUTE
+    E:\Synergy\kernelhwsrv\kernel\eka\compsupp\rvct\rtexit.cpp 0x00000000   Number         0  rtexit.o ABSOLUTE
+    E:\Synergy\kernelhwsrv\kernel\eka\compsupp\rvct\rtlib.cpp 0x00000000   Number         0  rtlib.o ABSOLUTE
+    E:\Synergy\kernelhwsrv\kernel\eka\compsupp\rvct\rtraise.cpp 0x00000000   Number         0  rtraise.o ABSOLUTE
+    E:\Synergy\kernelhwsrv\kernel\eka\compsupp\rvct\sftfpini.cpp 0x00000000   Number         0  sftfpini.o ABSOLUTE
+    E:\Synergy\kernelhwsrv\kernel\eka\compsupp\rvct\ucppinit.cpp 0x00000000   Number         0  ucppinit.o ABSOLUTE
+    E:\Synergy\kernelhwsrv\kernel\eka\compsupp\symcpp\rtopdel.cpp 0x00000000   Number         0  rtopdel.o ABSOLUTE
+    E:\Synergy\kernelhwsrv\kernel\eka\compsupp\symcpp\rtopnew.cpp 0x00000000   Number         0  rtopnew.o ABSOLUTE
+    E:\Synergy\kernelhwsrv\kernel\eka\euser\epoc\arm\uc_dll.cpp 0x00000000   Number         0  uc_dll.o ABSOLUTE
+    E:\Synergy\kernelhwsrv\kernel\eka\euser\epoc\up_dll_tls.cpp 0x00000000   Number         0  up_dll_tls.o ABSOLUTE
+    E:\\Synergy\\kernelhwsrv\\kernel\\eka\\compsupp\\rvct\\ucppinit.cpp 0x00000000   Number         0  ucppinit.o ABSOLUTE
+    E:\\build_e\\MSF00428_Symbian_OS_vTB101SF\\epoc32\\build\\euser\\c_ccca38e4f8558738\\edll_lib\\armv5\\udeb\\uc_dll_.cpp 0x00000000   Number         0  uc_dll_.o ABSOLUTE
+    E:\build_e\MSF00428_Symbian_OS_vTB101SF\epoc32\build\euser\c_ccca38e4f8558738\edll_lib\armv5\udeb\uc_dll_.cpp 0x00000000   Number         0  uc_dll_.o ABSOLUTE
+    .emb_text                                0x00008000   Section       40  uc_dll_.o(.emb_text)
+    Symbian$$eit_base                        0x00008014   Data           4  uc_dll_.o(.emb_text)
+    Symbian$$eit_limit                       0x00008018   Data           4  uc_dll_.o(.emb_text)
+    Symbian$$code_seg_base                   0x0000801c   Data           4  uc_dll_.o(.emb_text)
+    Symbian$$code_seg_limit                  0x00008020   Data           4  uc_dll_.o(.emb_text)
+    Symbian$$reserved                        0x00008024   Data           4  uc_dll_.o(.emb_text)
+    .emb_text                                0x00008028   Section       52  ucppinit.o(.emb_text)
+    loop                                     0x0000803c   ARM Code       0  ucppinit.o(.emb_text)
+    ret                                      0x00008044   ARM Code       0  ucppinit.o(.emb_text)
+    base                                     0x00008054   Data           0  ucppinit.o(.emb_text)
+    limit                                    0x00008058   Data           0  ucppinit.o(.emb_text)
+    .text                                    0x000080ac   Section       36  rtabort.o(.text)
+    .text                                    0x000080d8   Section       10  rtdiv0.o(.text)
+    .text                                    0x000080e2   Section       12  rtexit.o(.text)
+    .text                                    0x000080ee   Section       72  rtraise.o(.text)
+    .text                                    0x00008138   Section       92  sftfpini.o(.text)
+    .text                                    0x00008194   Section       14  rtlib.o(.text)
+    .text                                    0x000081a2   Section       66  rtopnew.o(.text)
+    .text                                    0x000081e4   Section       52  rtopdel.o(.text)
+    .text                                    0x00008218   Section       80  uc_dll.o(.text)
+    .text                                    0x00008268   Section       44  up_dll_tls.o(.text)
+    .text                                    0x00008294   Section        4  hguard.o(.text)
+    .text                                    0x00008298   Section       84  llsrdv.o(.text)
+    _llsrdv_nonega                           0x000082b0   ARM Code       0  llsrdv.o(.text)
+    _llsrdv_nonegb                           0x000082c0   ARM Code       0  llsrdv.o(.text)
+    _llsrdv_nonegq                           0x000082d4   ARM Code       0  llsrdv.o(.text)
+    _llsrdv_nonegr                           0x000082e4   ARM Code       0  llsrdv.o(.text)
+    .text                                    0x000082ec   Section      160  lludiv10.o(.text)
+    .text                                    0x0000838c   Section       28  llmul.o(.text)
+    .text                                    0x000083a8   Section      716  lludiv5.o(.text)
+    _ll_udiv_small_nosh32                    0x00008444   ARM Code       0  lludiv5.o(.text)
+    _ll_udiv_small_loop                      0x0000848c   ARM Code       0  lludiv5.o(.text)
+    _ll_udiv_small_loopdone                  0x000084f8   ARM Code       0  lludiv5.o(.text)
+    _ll_udiv_big_loop                        0x000085a8   ARM Code       0  lludiv5.o(.text)
+    _ll_udiv_big_loopdone                    0x00008614   ARM Code       0  lludiv5.o(.text)
+    .text                                    0x00008674   Section       96  llurdv5.o(.text)
+    .text                                    0x000086d4   Section      208  bigflt0.o(.text)
+    .text                                    0x000087a4   Section        8  abs.o(.text)
+    .text                                    0x000087ac   Section       20  div.o(.text)
+    .text                                    0x000087c0   Section       20  ldiv.o(.text)
+    .text                                    0x000087d4   Section       36  llabs.o(.text)
+    .text                                    0x000087f8   Section       24  lldiv.o(.text)
+    .text                                    0x00008810   Section      180  rt_memcpy.o(.text)
+    _memcpy_dest_aligned                     0x00008844   ARM Code       0  rt_memcpy.o(.text)
+    _memcpy_src1_loop                        0x00008864   ARM Code       0  rt_memcpy.o(.text)
+    _memcpy_src2_loop                        0x00008884   ARM Code       0  rt_memcpy.o(.text)
+    _memcpy_src3_loop                        0x000088a4   ARM Code       0  rt_memcpy.o(.text)
+    .text                                    0x000088c4   Section       20  rt_memset.o(.text)
+    .text                                    0x000088d8   Section      108  rt_memcpy_w.o(.text)
+    _memcpy_aligned_loop                     0x000088e4   ARM Code       0  rt_memcpy_w.o(.text)
+    _memcpy_small                            0x000088fc   ARM Code       0  rt_memcpy_w.o(.text)
+    .text                                    0x00008944   Section      136  rt_memmove_w.o(.text)
+    _align_loop                              0x0000895c   ARM Code       0  rt_memmove_w.o(.text)
+    _loop                                    0x0000897c   ARM Code       0  rt_memmove_w.o(.text)
+    _memmove_small                           0x00008990   ARM Code       0  rt_memmove_w.o(.text)
+    .text                                    0x000089cc   Section       88  rt_memclr_w.o(.text)
+    _loop                                    0x000089e4   ARM Code       0  rt_memclr_w.o(.text)
+    .text                                    0x00008a24   Section       68  rt_memclr.o(.text)
+    _Bytes                                   0x00008a54   ARM Code       0  rt_memclr.o(.text)
+    .text                                    0x00008a68   Section       12  divtest.o(.text)
+    .text                                    0x00008a74   Section       64  rtsdiv10.o(.text)
+    .text                                    0x00008ab4   Section       44  rtudiv10.o(.text)
+    .text                                    0x00008ae0   Section      180  dspdiv32.o(.text)
+    .text                                    0x00008b94   Section      156  dspdiv32u.o(.text)
+    .text                                    0x00008c30   Section      436  dspdiv64.o(.text)
+    .text                                    0x00008de4   Section       16  rt_sdiv.o(.text)
+    .text                                    0x00008df4   Section       16  rt_udiv.o(.text)
+    .text                                    0x00008e04   Section        2  init.o(.text)
+    .text                                    0x00008e08   Section       12  llneg.o(.text)
+    .text                                    0x00008e14   Section       12  lladd.o(.text)
+    .text                                    0x00008e20   Section       12  llsub.o(.text)
+    .text                                    0x00008e2c   Section       12  llrsb.o(.text)
+    .text                                    0x00008e38   Section       12  lladdls.o(.text)
+    .text                                    0x00008e44   Section       12  llsubls.o(.text)
+    .text                                    0x00008e50   Section       12  llrsbls.o(.text)
+    .text                                    0x00008e5c   Section       12  lladdlu.o(.text)
+    .text                                    0x00008e68   Section       12  llsublu.o(.text)
+    .text                                    0x00008e74   Section       12  llrsblu.o(.text)
+    .text                                    0x00008e80   Section        8  llmullu.o(.text)
+    .text                                    0x00008e88   Section       16  lladdss.o(.text)
+    .text                                    0x00008e98   Section       16  llsubss.o(.text)
+    .text                                    0x00008ea8   Section       16  llrsbss.o(.text)
+    .text                                    0x00008eb8   Section       16  lladduu.o(.text)
+    .text                                    0x00008ec8   Section       12  llsubuu.o(.text)
+    .text                                    0x00008ed4   Section       12  llrsbuu.o(.text)
+    .text                                    0x00008ee0   Section       12  llnot.o(.text)
+    .text                                    0x00008eec   Section       12  lland.o(.text)
+    .text                                    0x00008ef8   Section       12  llor.o(.text)
+    .text                                    0x00008f04   Section       12  lleor.o(.text)
+    .text                                    0x00008f10   Section       12  llcmpu.o(.text)
+    .text                                    0x00008f1c   Section       12  llcmpge.o(.text)
+    .text                                    0x00008f28   Section       12  llcmple.o(.text)
+    .text                                    0x00008f34   Section        8  llfroml.o(.text)
+    .text                                    0x00008f3c   Section        8  llfromu.o(.text)
+    .text                                    0x00008f44   Section        4  lltol.o(.text)
+    .text                                    0x00008f48   Section        8  llmulls.o(.text)
+    .text                                    0x00008f50   Section       12  llmuluu.o(.text)
+    .text                                    0x00008f5c   Section       12  llmulss.o(.text)
+    .text                                    0x00008f68   Section        8  llmlauu.o(.text)
+    .text                                    0x00008f70   Section        8  llmlass.o(.text)
+    .text                                    0x00008f78   Section       24  switch8.o(.text)
+    .text                                    0x00008f90   Section        4  dllexp.o(.text)
+    .text                                    0x00008f94   Section        4  aeabi_idiv0.o(.text)
+    .text                                    0x00008f98   Section        4  aeabi_ldiv0.o(.text)
+    .text                                    0x00008f9c   Section       84  llsdiv.o(.text)
+    _llsdiv_nonega                           0x00008fb4   ARM Code       0  llsdiv.o(.text)
+    _llsdiv_nonegb                           0x00008fc4   ARM Code       0  llsdiv.o(.text)
+    _llsdiv_nonegq                           0x00008fd8   ARM Code       0  llsdiv.o(.text)
+    _llsdiv_nonegr                           0x00008fe8   ARM Code       0  llsdiv.o(.text)
+    .text                                    0x00008ff0   Section      356  aeabi_sdiv.o(.text)
+    __arm_div8                               0x0000901c   ARM Code       0  aeabi_sdiv.o(.text)
+    __arm_div4                               0x0000904c   ARM Code       0  aeabi_sdiv.o(.text)
+    __arm_div1                               0x00009070   ARM Code       0  aeabi_sdiv.o(.text)
+    __arm_div_negative                       0x00009080   ARM Code       0  aeabi_sdiv.o(.text)
+    __arm_div_large                          0x000090a0   ARM Code       0  aeabi_sdiv.o(.text)
+    .text_udiv                               0x00009154   Section       28  aeabi_sdiv.o(.text_udiv)
+    CL$$btod_d2e                             0x00009170   Section       56  btod.o(CL$$btod_d2e)
+    CL$$btod_d2e_denorm_low                  0x000091a8   Section       84  btod.o(CL$$btod_d2e_denorm_low)
+    CL$$btod_d2e_norm_op1                    0x000091fc   Section      104  btod.o(CL$$btod_d2e_norm_op1)
+    CL$$btod_div_common                      0x00009264   Section      844  btod.o(CL$$btod_div_common)
+    _Recip_Table                             0x00009530   Data           0  btod.o(CL$$btod_div_common)
+    CL$$btod_e2d                             0x000095b0   Section      100  btod.o(CL$$btod_e2d)
+    CL$$btod_e2e                             0x00009614   Section      220  btod.o(CL$$btod_e2e)
+    _e2e_underflow_dealtwith                 0x0000961c   ARM Code       0  btod.o(CL$$btod_e2e)
+    _e2e_round_by_C                          0x00009624   ARM Code       0  btod.o(CL$$btod_e2e)
+    _e2e_return_value                        0x00009660   ARM Code       0  btod.o(CL$$btod_e2e)
+    _e2e_exact_or_tied                       0x0000966c   ARM Code       0  btod.o(CL$$btod_e2e)
+    _e2e_underflow                           0x00009678   ARM Code       0  btod.o(CL$$btod_e2e)
+    _e2e_underflow_huge                      0x000096c8   ARM Code       0  btod.o(CL$$btod_e2e)
+    CL$$btod_ediv                            0x000096f0   Section       52  btod.o(CL$$btod_ediv)
+    _div_special_case                        0x00009718   ARM Code       0  btod.o(CL$$btod_ediv)
+    CL$$btod_edivd                           0x00009724   Section       52  btod.o(CL$$btod_edivd)
+    _divd_special_case                       0x0000974c   ARM Code       0  btod.o(CL$$btod_edivd)
+    CL$$btod_emul                            0x00009758   Section       52  btod.o(CL$$btod_emul)
+    _mul_uncommon                            0x00009780   ARM Code       0  btod.o(CL$$btod_emul)
+    CL$$btod_emuld                           0x0000978c   Section       52  btod.o(CL$$btod_emuld)
+    _muld_uncommon                           0x000097b4   ARM Code       0  btod.o(CL$$btod_emuld)
+    CL$$btod_mult_common                     0x000097c0   Section      616  btod.o(CL$$btod_mult_common)
+    _Mult_64x32                              0x000098e8   ARM Code       0  btod.o(CL$$btod_mult_common)
+    _Mult_32xX                               0x00009960   ARM Code       0  btod.o(CL$$btod_mult_common)
+    _Mult_32x32                              0x000099e0   ARM Code       0  btod.o(CL$$btod_mult_common)
+    $v0                                      0x00009a28   ARM Code       0  istatus.o(x$fpl$ieeestatus)
+    x$fpl$ieeestatus                         0x00009a28   Section       36  istatus.o(x$fpl$ieeestatus)
+    .constdata$1                             0x00009a4c   Data           0  sftfpini.o(.constdata)
+    KFpGeneralPanic@__rt_fp_status_addr_0    0x00009a4c   Data          28  sftfpini.o(.constdata)
+    .constdata                               0x00009a4c   Section       28  sftfpini.o(.constdata)
+    .constdata$1                             0x00009a68   Data           0  bigflt0.o(.constdata)
+    tenpwrs_x@_btod_etento_0                 0x00009a68   Data          60  bigflt0.o(.constdata)
+    .constdata                               0x00009a68   Section      148  bigflt0.o(.constdata)
+    tenpwrs_i@_btod_etento_1                 0x00009aa4   Data          64  bigflt0.o(.constdata)
+    .ARM.exidx                               0x00009afc   Section        8  ucppinit.o(.ARM.exidx)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THUMB_ISAv3$ARM_ISAv6$M$E$P$VFPv2$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$IEEEJ$EBA8$UX$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    drtrvct2_2{000a0000}.dll                 0x00000000   Data           0  anon$$obj.o ABSOLUTE
+    euser{000a0000}[100039e5].dll            0x00000000   Data           0  anon$$obj.o ABSOLUTE
+    SHT$$INIT_ARRAY$$Base                     - Undefined Weak Reference
+    SHT$$INIT_ARRAY$$Limit                    - Undefined Weak Reference
+    User::RaiseException(TExcType)            - Undefined Reference
+    _ZN4User14RaiseExceptionE8TExcType@euser{000a0000}[100039e5].dll  - Undefined Reference
+    User::Exit(int)                           - Undefined Reference
+    _ZN4User4ExitEi@euser{000a0000}[100039e5].dll  - Undefined Reference
+    User::Free(void*)                         - Undefined Reference
+    _ZN4User4FreeEPv@euser{000a0000}[100039e5].dll  - Undefined Reference
+    User::Alloc(int)                          - Undefined Reference
+    _ZN4User5AllocEi@euser{000a0000}[100039e5].dll  - Undefined Reference
+    User::Panic(const TDesC16&, int)          - Undefined Reference
+    _ZN4User5PanicERK7TDesC16i@euser{000a0000}[100039e5].dll  - Undefined Reference
+    User::AllocZ(int)                         - Undefined Reference
+    _ZN4User6AllocZEi@euser{000a0000}[100039e5].dll  - Undefined Reference
+    RThread::Kill(int)                        - Undefined Reference
+    _ZN7RThread4KillEi@euser{000a0000}[100039e5].dll  - Undefined Reference
+    UserSvr::DllFreeTls(int)                  - Undefined Reference
+    _ZN7UserSvr10DllFreeTlsEi@euser{000a0000}[100039e5].dll  - Undefined Reference
+    UserSvr::DllTls(int, int)                 - Undefined Reference
+    _ZN7UserSvr6DllTlsEii@euser{000a0000}[100039e5].dll  - Undefined Reference
+    UserSvr::DllSetTls(int, int, void*)       - Undefined Reference
+    _ZN7UserSvr9DllSetTlsEiiPv@euser{000a0000}[100039e5].dll  - Undefined Reference
+    run_static_dtors                          - Undefined Weak Reference
+    Image$$ER_RO$$Base                       0x00008000   Number         0  anon$$obj.o(linker$$defined$$symbols)
+    _E32Dll                                  0x00008000   ARM Code      40  uc_dll_.o(.emb_text)
+    Symbian$$CPP$$Exception$$Descriptor      0x00008014   Data           0  uc_dll_.o(.emb_text)
+    __cpp_initialize__aeabi_                 0x00008028   ARM Code      52  ucppinit.o(.emb_text)
+    std::nothrow                             0x0000805c   ARM Code       0  ucppinit.o(.emb_text)
+    __PLT                                    0x0000805c   ARM Code       0  anon$$obj.o(.plt)
+    __rt_abort                               0x000080ad   Thumb Code    24  rtabort.o(.text)
+    std::terminate()                         0x000080c5   Thumb Code     8  rtabort.o(.text)
+    Inline ARM to Thumb Veneer to __rt_div0  0x000080d0   ARM Code       0  rtdiv0.o(.text)
+    __rt_div0                                0x000080d9   Thumb Code    10  rtdiv0.o(.text)
+    __rt_exit                                0x000080e3   Thumb Code    12  rtexit.o(.text)
+    __rt_raise                               0x000080ef   Thumb Code    72  rtraise.o(.text)
+    _fp_init                                 0x00008139   Thumb Code     2  sftfpini.o(.text)
+    __rt_fp_status_addr                      0x0000813b   Thumb Code    86  sftfpini.o(.text)
+    __rt_lib_shutdown                        0x00008195   Thumb Code     2  rtlib.o(.text)
+    __rt_lib_init                            0x00008197   Thumb Code    12  rtlib.o(.text)
+    operator new(unsigned)                   0x000081a3   Thumb Code    12  rtopnew.o(.text)
+    operator new[] (unsigned)                0x000081af   Thumb Code    12  rtopnew.o(.text)
+    operator new(unsigned, const std::nothrow_t&) 0x000081bb   Thumb Code    14  rtopnew.o(.text)
+    operator new[] (unsigned, const std::nothrow_t&) 0x000081c9   Thumb Code    14  rtopnew.o(.text)
+    operator new(unsigned, unsigned)         0x000081d7   Thumb Code    14  rtopnew.o(.text)
+    operator delete (void*)                  0x000081e5   Thumb Code    12  rtopdel.o(.text)
+    operator delete[] (void*)                0x000081f1   Thumb Code    12  rtopdel.o(.text)
+    operator delete (void*, const std::nothrow_t&) 0x000081fd   Thumb Code    14  rtopdel.o(.text)
+    operator delete[] (void*, const std::nothrow_t&) 0x0000820b   Thumb Code    14  rtopdel.o(.text)
+    _E32Dll_Body                             0x00008218   ARM Code      76  uc_dll.o(.text)
+    Dll::SetTls(void*)                       0x00008269   Thumb Code    16  up_dll_tls.o(.text)
+    Dll::Tls()                               0x00008279   Thumb Code    12  up_dll_tls.o(.text)
+    Dll::FreeTls()                           0x00008285   Thumb Code    10  up_dll_tls.o(.text)
+    __use_no_heap                            0x00008295   Thumb Code     2  hguard.o(.text)
+    __I_use_heap                             0x00008297   Thumb Code     2  hguard.o(.text)
+    _ll_srdv                                 0x00008298   ARM Code      84  llsrdv.o(.text)
+    _ll_udiv10                               0x000082ec   ARM Code     160  lludiv10.o(.text)
+    __aeabi_lmul                             0x0000838c   ARM Code       0  llmul.o(.text)
+    _ll_mul                                  0x0000838c   ARM Code      28  llmul.o(.text)
+    __aeabi_uldivmod                         0x000083a8   ARM Code       0  lludiv5.o(.text)
+    _ll_udiv                                 0x000083a8   ARM Code     716  lludiv5.o(.text)
+    _ll_udiv_small                           0x00008408   ARM Code       0  lludiv5.o(.text)
+    _ll_udiv_big                             0x00008518   ARM Code       0  lludiv5.o(.text)
+    _ll_udiv_ginormous                       0x0000864c   ARM Code       0  lludiv5.o(.text)
+    _ll_div0                                 0x0000866c   ARM Code       0  lludiv5.o(.text)
+    _ll_urdv                                 0x00008674   ARM Code      96  llurdv5.o(.text)
+    _btod_etento                             0x000086d5   Thumb Code   202  bigflt0.o(.text)
+    abs                                      0x000087a5   Thumb Code     8  abs.o(.text)
+    div                                      0x000087ad   Thumb Code    20  div.o(.text)
+    ldiv                                     0x000087c1   Thumb Code    20  ldiv.o(.text)
+    llabs                                    0x000087d5   Thumb Code    36  llabs.o(.text)
+    lldiv                                    0x000087f9   Thumb Code    24  lldiv.o(.text)
+    __aeabi_memcpy                           0x00008810   ARM Code       0  rt_memcpy.o(.text)
+    __rt_memcpy                              0x00008810   ARM Code     180  rt_memcpy.o(.text)
+    __rt_memset                              0x000088c4   ARM Code      20  rt_memset.o(.text)
+    __aeabi_memcpy4                          0x000088d8   ARM Code       0  rt_memcpy_w.o(.text)
+    __aeabi_memcpy8                          0x000088d8   ARM Code       0  rt_memcpy_w.o(.text)
+    __rt_memcpy_w                            0x000088d8   ARM Code     108  rt_memcpy_w.o(.text)
+    _memcpy_lastbytes                        0x00008924   ARM Code       0  rt_memcpy_w.o(.text)
+    __aeabi_memmove4                         0x00008944   ARM Code       0  rt_memmove_w.o(.text)
+    __aeabi_memmove8                         0x00008944   ARM Code       0  rt_memmove_w.o(.text)
+    __rt_memmove_w                           0x00008944   ARM Code     136  rt_memmove_w.o(.text)
+    __memmove_aligned                        0x00008970   ARM Code       0  rt_memmove_w.o(.text)
+    __memmove_lastfew                        0x000089ac   ARM Code       0  rt_memmove_w.o(.text)
+    __aeabi_memclr4                          0x000089cc   ARM Code       0  rt_memclr_w.o(.text)
+    __aeabi_memclr8                          0x000089cc   ARM Code       0  rt_memclr_w.o(.text)
+    __rt_memclr_w                            0x000089cc   ARM Code      88  rt_memclr_w.o(.text)
+    _memset_w                                0x000089d0   ARM Code       0  rt_memclr_w.o(.text)
+    __aeabi_memclr                           0x00008a24   ARM Code       0  rt_memclr.o(.text)
+    __rt_memclr                              0x00008a24   ARM Code      68  rt_memclr.o(.text)
+    _memset                                  0x00008a28   ARM Code       0  rt_memclr.o(.text)
+    __rt_divtest                             0x00008a68   ARM Code      12  divtest.o(.text)
+    __rt_sdiv10                              0x00008a74   ARM Code      64  rtsdiv10.o(.text)
+    __rt_udiv10                              0x00008ab4   ARM Code      44  rtudiv10.o(.text)
+    __rt_sdiv32by16                          0x00008ae0   ARM Code     180  dspdiv32.o(.text)
+    __rt_udiv32by16                          0x00008b94   ARM Code     156  dspdiv32u.o(.text)
+    __rt_sdiv64by32                          0x00008c30   ARM Code     436  dspdiv64.o(.text)
+    __rt_sdiv                                0x00008de4   ARM Code      16  rt_sdiv.o(.text)
+    __rt_udiv                                0x00008df4   ARM Code      16  rt_udiv.o(.text)
+    __cpp_initialise                         0x00008e05   Thumb Code     2  init.o(.text)
+    __ARM_ll_neg                             0x00008e08   ARM Code      12  llneg.o(.text)
+    _ll_neg                                  0x00008e08   ARM Code       0  llneg.o(.text)
+    __ARM_ll_add                             0x00008e14   ARM Code      12  lladd.o(.text)
+    _ll_add                                  0x00008e14   ARM Code       0  lladd.o(.text)
+    __ARM_ll_sub                             0x00008e20   ARM Code      12  llsub.o(.text)
+    _ll_sub                                  0x00008e20   ARM Code       0  llsub.o(.text)
+    __ARM_ll_rsb                             0x00008e2c   ARM Code      12  llrsb.o(.text)
+    _ll_rsb                                  0x00008e2c   ARM Code       0  llrsb.o(.text)
+    __ARM_ll_addls                           0x00008e38   ARM Code      12  lladdls.o(.text)
+    _ll_addls                                0x00008e38   ARM Code       0  lladdls.o(.text)
+    __ARM_ll_subls                           0x00008e44   ARM Code      12  llsubls.o(.text)
+    _ll_subls                                0x00008e44   ARM Code       0  llsubls.o(.text)
+    __ARM_ll_rsbls                           0x00008e50   ARM Code      12  llrsbls.o(.text)
+    _ll_rsbls                                0x00008e50   ARM Code       0  llrsbls.o(.text)
+    __ARM_ll_addlu                           0x00008e5c   ARM Code      12  lladdlu.o(.text)
+    _ll_addlu                                0x00008e5c   ARM Code       0  lladdlu.o(.text)
+    __ARM_ll_sublu                           0x00008e68   ARM Code      12  llsublu.o(.text)
+    _ll_sublu                                0x00008e68   ARM Code       0  llsublu.o(.text)
+    __ARM_ll_rsblu                           0x00008e74   ARM Code      12  llrsblu.o(.text)
+    _ll_rsblu                                0x00008e74   ARM Code       0  llrsblu.o(.text)
+    __ARM_ll_mullu                           0x00008e80   ARM Code       8  llmullu.o(.text)
+    _ll_mullu                                0x00008e80   ARM Code       0  llmullu.o(.text)
+    __ARM_ll_addss                           0x00008e88   ARM Code      16  lladdss.o(.text)
+    _ll_addss                                0x00008e88   ARM Code       0  lladdss.o(.text)
+    __ARM_ll_subss                           0x00008e98   ARM Code      16  llsubss.o(.text)
+    _ll_subss                                0x00008e98   ARM Code       0  llsubss.o(.text)
+    __ARM_ll_rsbss                           0x00008ea8   ARM Code      16  llrsbss.o(.text)
+    _ll_rsbss                                0x00008ea8   ARM Code       0  llrsbss.o(.text)
+    __ARM_ll_adduu                           0x00008eb8   ARM Code      16  lladduu.o(.text)
+    _ll_adduu                                0x00008eb8   ARM Code       0  lladduu.o(.text)
+    __ARM_ll_subuu                           0x00008ec8   ARM Code      12  llsubuu.o(.text)
+    _ll_subuu                                0x00008ec8   ARM Code       0  llsubuu.o(.text)
+    __ARM_ll_rsbuu                           0x00008ed4   ARM Code      12  llrsbuu.o(.text)
+    _ll_rsbuu                                0x00008ed4   ARM Code       0  llrsbuu.o(.text)
+    __ARM_ll_not                             0x00008ee0   ARM Code      12  llnot.o(.text)
+    _ll_not                                  0x00008ee0   ARM Code       0  llnot.o(.text)
+    __ARM_ll_and                             0x00008eec   ARM Code      12  lland.o(.text)
+    _ll_and                                  0x00008eec   ARM Code       0  lland.o(.text)
+    __ARM_ll_or                              0x00008ef8   ARM Code      12  llor.o(.text)
+    _ll_or                                   0x00008ef8   ARM Code       0  llor.o(.text)
+    __ARM_ll_eor                             0x00008f04   ARM Code      12  lleor.o(.text)
+    _ll_eor                                  0x00008f04   ARM Code       0  lleor.o(.text)
+    __ARM_ll_cmpu                            0x00008f10   ARM Code      12  llcmpu.o(.text)
+    _ll_cmpu                                 0x00008f10   ARM Code       0  llcmpu.o(.text)
+    __ARM_ll_cmpge                           0x00008f1c   ARM Code      12  llcmpge.o(.text)
+    _ll_cmpge                                0x00008f1c   ARM Code       0  llcmpge.o(.text)
+    __ARM_ll_cmple                           0x00008f28   ARM Code      12  llcmple.o(.text)
+    _ll_cmple                                0x00008f28   ARM Code       0  llcmple.o(.text)
+    __ARM_ll_from_l                          0x00008f34   ARM Code       8  llfroml.o(.text)
+    _ll_from_l                               0x00008f34   ARM Code       0  llfroml.o(.text)
+    __ARM_ll_from_u                          0x00008f3c   ARM Code       8  llfromu.o(.text)
+    _ll_from_u                               0x00008f3c   ARM Code       0  llfromu.o(.text)
+    __ARM_ll_to_l                            0x00008f44   ARM Code       4  lltol.o(.text)
+    _ll_to_l                                 0x00008f44   ARM Code       0  lltol.o(.text)
+    __ARM_ll_mulls                           0x00008f48   ARM Code       8  llmulls.o(.text)
+    _ll_mulls                                0x00008f48   ARM Code       0  llmulls.o(.text)
+    __ARM_ll_muluu                           0x00008f50   ARM Code      12  llmuluu.o(.text)
+    _ll_muluu                                0x00008f50   ARM Code       0  llmuluu.o(.text)
+    __ARM_ll_mulss                           0x00008f5c   ARM Code      12  llmulss.o(.text)
+    _ll_mulss                                0x00008f5c   ARM Code       0  llmulss.o(.text)
+    __ARM_ll_mlauu                           0x00008f68   ARM Code       8  llmlauu.o(.text)
+    _ll_mlauu                                0x00008f68   ARM Code       0  llmlauu.o(.text)
+    __ARM_ll_mlass                           0x00008f70   ARM Code       8  llmlass.o(.text)
+    _ll_mlass                                0x00008f70   ARM Code       0  llmlass.o(.text)
+    __ARM_switch8                            0x00008f78   ARM Code      24  switch8.o(.text)
+    __rt_switch8                             0x00008f78   ARM Code       0  switch8.o(.text)
+    __DLL_Export_Table__                     0x00008f90   ARM Code       4  dllexp.o(.text)
+    __aeabi_idiv0                            0x00008f94   ARM Code       4  aeabi_idiv0.o(.text)
+    __aeabi_ldiv0                            0x00008f98   ARM Code       4  aeabi_ldiv0.o(.text)
+    __aeabi_ldivmod                          0x00008f9c   ARM Code       0  llsdiv.o(.text)
+    _ll_sdiv                                 0x00008f9c   ARM Code      84  llsdiv.o(.text)
+    __aeabi_idiv                             0x00008ff0   ARM Code       0  aeabi_sdiv.o(.text)
+    __aeabi_idivmod                          0x00008ff0   ARM Code     356  aeabi_sdiv.o(.text)
+    __aeabi_uidiv                            0x00009154   ARM Code       0  aeabi_sdiv.o(.text_udiv)
+    __aeabi_uidivmod                         0x00009154   ARM Code      28  aeabi_sdiv.o(.text_udiv)
+    _btod_d2e                                0x00009170   ARM Code      56  btod.o(CL$$btod_d2e)
+    _d2e_denorm_low                          0x000091a8   ARM Code      84  btod.o(CL$$btod_d2e_denorm_low)
+    _d2e_norm_op1                            0x000091fc   ARM Code     104  btod.o(CL$$btod_d2e_norm_op1)
+    __btod_div_common                        0x00009264   ARM Code     716  btod.o(CL$$btod_div_common)
+    _e2d                                     0x000095b0   ARM Code      96  btod.o(CL$$btod_e2d)
+    _e2e                                     0x00009614   ARM Code     220  btod.o(CL$$btod_e2e)
+    _btod_ediv                               0x000096f0   ARM Code      52  btod.o(CL$$btod_ediv)
+    _btod_edivd                              0x00009724   ARM Code      52  btod.o(CL$$btod_edivd)
+    _btod_emul                               0x00009758   ARM Code      52  btod.o(CL$$btod_emul)
+    _btod_emuld                              0x0000978c   ARM Code      52  btod.o(CL$$btod_emuld)
+    __btod_mult_common                       0x000097c0   ARM Code     616  btod.o(CL$$btod_mult_common)
+    __ieee_status                            0x00009a28   ARM Code      32  istatus.o(x$fpl$ieeestatus)
+    .ARM.exidx$$Base                         0x00009afc   Number         0  ucppinit.o(.ARM.exidx)
+    .ARM.exidx$$Limit                        0x00009b04   Number         0  ucppinit.o(.ARM.exidx)
+    Image$$ER_RO$$Limit                      0x00009b04   Number         0  anon$$obj.o(linker$$defined$$symbols)
+
