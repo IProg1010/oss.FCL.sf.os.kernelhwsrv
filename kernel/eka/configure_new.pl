@@ -15,25 +15,70 @@
 #
 
 my @rootdirs;
-open PIPE, "dir /b /ad \\ |";
-while (<PIPE>) {
-	my $dir=$_;
+#open PIPE, "dir /b /ad \\ |";
+#open PIPE, "dir /b /ad \\ |";
+#while (<PIPE>) {
+#	my $dir=$_;
 #	print;
-	chomp $dir;
-	unless (/^epoc32$/i) {
-		$dir="\\".$dir."\\*.bld";
-		push @rootdirs, $dir;
+#	chomp $dir;
+#	unless (/^epoc32$/i) {
+#		$dir="\\".$dir."\\*.bld";
+#		push @rootdirs, $dir;
+#	}
+#}
+#close PIPE;
+
+
+#Find all directories
+open my $pipe, "ls -d */ |" or die "Cannot open pipe: $!";
+
+while (my $line = <$pipe>) 
+{
+    chomp $line;
+    print "Directory: $line\n";
+	#my $dir=$_;
+	print;
+	chomp $line;
+	unless (/^epoc32$/i) 
+	{
+		$line="./".$line;
+    	print "Directory: $line\n";
+		push @rootdirs, $line;
 	}
 }
-close PIPE;
+
+close $pipe;
+
 my %bldfiles;
 my $dir;
-foreach $dir (@rootdirs) {
+
+#foreach $dir (@rootdirs) {
 #	print "$dir\n";
-	open PIPE, "dir /s /b $dir 2>NUL |";
-	while (<PIPE>) {
+#	open PIPE, "dir /s /b $dir 2>NUL |";
+#	while (<PIPE>) {
+#		my %bldfileprops;
+#		$bldfileprops{'fullname'}=lc $_;
+#		/\\(\w+)\.bld$/;
+#		my $name=lc $1;
+#		$bldfileprops{'name'}=$name;
+#		if (defined $bldfiles{$name}) {
+#			die "Duplicate build file name $name\n";
+#		}
+#		$bldfiles{$name}=\%bldfileprops;
+#	}
+#	close PIPE;
+#}
+
+#Find all file template *.bld
+
+foreach $dir (@rootdirs) {
+	print "$dir\n";
+	open my $pipe, "find $dir -type f -name *.bld -print 2>/dev/null |" or die "Cannot open pipe: $!";
+	while (my $line = <$pipe>) {
+    	chomp $line;
+		print "$line\n";
 		my %bldfileprops;
-		$bldfileprops{'fullname'}=lc $_;
+		$bldfileprops{'fullname'}=lc $line;
 		/\\(\w+)\.bld$/;
 		my $name=lc $1;
 		$bldfileprops{'name'}=$name;
@@ -42,7 +87,7 @@ foreach $dir (@rootdirs) {
 		}
 		$bldfiles{$name}=\%bldfileprops;
 	}
-	close PIPE;
+	close $pipe;
 }
 
 my $bld;
@@ -54,6 +99,7 @@ foreach $bld (keys %bldfiles) {
 	chomp $filename;
 	my @options;
 	my @components;
+
 	open FILE, $filename or die "Could not open file $filename\n";
 	while (<FILE>) {
 		if (/^\!(\w+)$/) {
@@ -116,7 +162,7 @@ if ($nargs==0) {
 my @todo;
 foreach $bld (@todo_temp) {
 	push @todo, $bld if (!grep {$bld eq $_} @omit);
-}
+} 
 
 #print join "\n",@todo;
 #print "\n";
