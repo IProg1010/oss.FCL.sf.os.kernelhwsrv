@@ -6,15 +6,17 @@ import glob
 rootdirs = []
 for entry in os.listdir('.'):
     if os.path.isdir(entry) and entry.lower() != 'epoc32':
-        print(os.path.join(entry, '*.bld'));        
-        rootdirs.append(os.path.join(entry, '*.bld'))
+        print(os.path.join('./', entry, '*.bld'));        
+        rootdirs.append(os.path.join('./', entry, '*.bld'))
 
 # Словарь для хранения информации о build-файлах
 bldfiles = {}
 
 # Обработка каждого пути
 for pattern in rootdirs:
+    print(pattern)
     for filepath in glob.glob(os.path.join(os.getcwd(), pattern)):
+        print("Found")
         fullpath = os.path.normcase(os.path.abspath(filepath))
         filename = os.path.basename(fullpath).lower()
         name = filename[:-4]  # удаляем '.bld'
