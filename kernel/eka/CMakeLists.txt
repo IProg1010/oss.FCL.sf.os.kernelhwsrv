@@ -4,39 +4,41 @@ cmake_minimum_required(VERSION 3.20)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
 # Path to toolchain file. This one has to be before 'project()' below
-set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/toolchain.cmake)
+set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/../../toolchain.cmake)
 set(GIT_HEAD_FILE "${CMAKE_CURRENT_SOURCE_DIR}/.git/HEAD")
 
-project(kernel C CXX ASM)
+project(kernel_eka C CXX ASM)
 
 #set(PATH_TO_SDK ${CMAKE_SOURCE_DIR}/../../cmsis CACHE PATH "Path to foled with sdk for chip of stm32f1X")
 
 set(EXECUTABLE ${PROJECT_NAME}.elf)
 #set(LINKER_FILE ${CMAKE_SOURCE_DIR}/memory_link.ld)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 98)
 #set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD 98)
 set(CMAKE_ASM_FLAGS "-x assembler-with-cpp")
 #set_property(SOURCE startup_stm32f103xb.s APPEND PROPERTY COMPILE_OPTIONS "-x" "assembler-with-cpp")
 
 message("PAth to ${PATH_TO_SDK}")
 message("Cmake source dir" ${CMAKE_SOURCE_DIR})
 
-include_directories(/usr/include/)
+#include_directories(/usr/include/)
 
-add_subdirectory(src)
+#add_subdirectory(src)
 
 # List of source files
-#set(SOURCE_FILE 
-#	${CMAKE_SOURCE_DIR}/main.cpp
+set(SOURCE_FILE 
+	${CMAKE_SOURCE_DIR}/.cpp
 
-#	)
+	)
+
 #set(SOURCE_FILE 
 #    ${CMAKE_SOURCE_DIR}/main.cpp
 
 #    )
 
+add_subdirectory(./drivers)
 #Build the executable based on the source files
 add_executable(${EXECUTABLE} ${SOURCE_FILE})
 
