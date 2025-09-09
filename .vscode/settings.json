@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "*.mmp": "c"
+        "*.mmp": "c",
+        "ranges": "c",
+        "*.mmh": "c"
     }
 }

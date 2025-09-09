@@ -161,43 +161,124 @@ target_compile_options(${EEXT_LIB_NAME} PUBLIC
 
 ################# ekern ##############################
 #/oss.FCL.sf.os.kernelhwsrv/kernel/eka/kernel/ekern.mmp
-#set(EKERNSMP_LIB_NAME ekernsmp)
-#set(SOURCE_FILES
-#    ./arm/x_entry.cia
-#    ./arm/x_entry.cpp
-#	)
+set(EKERNSMP_LIB_NAME ekernsmp)
+set(SOURCE_FILES
+    #array_eabi.cpp
+    
+    arm/cglobals.cpp 
+    arm/cexec.cpp 
+    arm/cexec.cia 
+    arm/cinit.cpp
+    arm/ckernel.cpp 
+    arm/ckernel.cia 
+    arm/cipc.cpp 
+    arm/cipc.cia 
+    arm/csched.cia
+    arm/cutils.cpp 
+    arm/cutils.cia
+    arm/cache.cpp 
+    arm/cache_maintenance.cia 
+    arm/cache_maintenance.cpp
+    arm/cache_maintenancev7.cia 
+    arm/cache_external.cpp
 
-#set(INCLUDE_FILES 
-#    ./kern_int.mmh)
+    arm/byte_pair.cia
 
-#add_library(${EKERNSMP_LIB_NAME} ${SOURCE_FILES} ${INCLUDE_FILES})
+    ../klib/arm/ckdes8.cia 
+    ../klib/arm/cumem.cia 
+    ../klib/arm/cbma.cia
+	../common/arm/carray.cia 
+    ../common/arm/cdes8.cia 
+    ../common/arm/cmem.cia
 
-#set(EPOC_KERNEL_DIR 
-#    ${CMAKE_CURRENT_SOURCE_DIR}/../../kernel)
+    ../common/arm/cgcchelp.cpp 
+    ../common/arm/cgcchelp.cia
 
-#message("INCLUDEDIR:${CMAKE_CURRENT_SOURCE_DIR}/../../include, ${EPOC_KERNEL_DIR}")
-#target_include_directories(${EKERNSMP_LIB_NAME} PUBLIC 
-#                            ${CMAKE_CURRENT_SOURCE_DIR}/../include 
-#                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/memmodel/epoc/ 
-#                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/nkern/
-#                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/nkern/arm 
-#                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/kernel 
-#                            ${EPOC_KERNEL_DIR})
+    sglobals.cpp 
+    device.cpp 
+    eventq.cpp
+    sexec.cpp 
+    sinit.cpp 
+    skernel.cpp
+    scodeseg.cpp 
+    sipc.cpp 
+    notifier.cpp 
+    object.cpp 
+    power.cpp 
+    server.cpp
+    sha256.cpp 
+    securerng.cpp
+    stimer.cpp 
+    sutils.cpp 
+    random.cpp
+    sprocess.cpp 
+    sthread.cpp 
+    smqueue.cpp
+    sproperty.cpp
+    ssharedio.cpp
+    ssecure.cpp
+    emi.cpp
+    objectix.cpp
+    sbtrace.cpp
+    stest.cpp
+    sshbuf.cpp 
+    smap.cpp
+    srandombuff.cpp
+    kerncorestats.cpp
+
+    ../klib/dbase.cpp 
+    ../klib/kdes8.cpp
+    ../klib/kheap.cpp 
+    ../klib/bma.cpp
+
+    ../common/alloc.cpp 
+    ../common/array.cpp 
+    ../common/des8.cpp 
+    ../common/mem.cpp
+
+    ../common/heap_hybrid.cpp 
+    ../common/debugfunction.cpp   
+    ../common/secure.cpp
+    ../common/gcchelp.cpp
+)
+
+set(INCLUDE_FILES 
+    ./kern_int.mmh)
+#    ../nkern/nkern.mmp)
+
+add_executable(${EKERNSMP_LIB_NAME} ${SOURCE_FILES} ${INCLUDE_FILES})
+
+set(EPOC_KERNEL_DIR 
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../kernel)
+
+message("INCLUDEDIR:${CMAKE_CURRENT_SOURCE_DIR}/../../include, ${EPOC_KERNEL_DIR}")
+target_include_directories(${EKERNSMP_LIB_NAME} PUBLIC 
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../include 
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/memmodel/epoc/ 
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/nkern/
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/nkern/arm 
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/kernel 
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/kernel/arm
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/dummy_genexec_hr/epoc32/include/platform
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/dummy_genexec_hr/epoc32/include/platform/kernel
+                            ${EPOC_KERNEL_DIR})
 
 
-#target_compile_definitions(${EKERNSMP_LIB_NAME} PUBLIC
-#                                __GCC32__=1 
-#                                __MARM__=1
-#                                __EABI__=1
-#                                __KERNEL_MODE__=1
-#                                _WIN32=1
-#                                __EPOC32__=1
-#                                __GCC32__=1)
+target_compile_definitions(${EKERNSMP_LIB_NAME} PUBLIC
+                                __GCC32__=1 
+                                __MARM__=1
+                                __EABI__=1
+                                __KERNEL_MODE__=1
+                                _WIN32=1
+                                __EPOC32__=1
+                                __GCC32__=1
+                                __EXPORT_MEMCPY__=1
+                                __IN_KERNEL__=1)
 
 
-#target_compile_options(${EKERNSMP_LIB_NAME} PUBLIC
-#                                -fpermissive 
-#                                )
+target_compile_options(${EKERNSMP_LIB_NAME} PUBLIC
+                                -fpermissive 
+                                )
 
 ###############################################
 
