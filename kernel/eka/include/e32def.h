@@ -1439,7 +1439,7 @@ In debug builds, this macro simply expands to call that function. For details on
 to define __DbgTestInvariant(), and an example of its use, see __DECLARE_TEST.
 
 The macro is typically invoked at the beginning of all the member functions of
-the class. For non-const functions (those which can change the object’s state),
+the class. For non-const functions (those which can change the objectï¿½s state),
 you can ensure that the object has been left in a stable state by invoking
 the macro at the end of the function.
 
@@ -2013,7 +2013,7 @@ should be called first, and then any further checking done.
 
 The second function declared, __DbgTest(), is intended to allow test code a way
 of directly accessing non-public members of a class. The function is
-implemented by any test code that requires it, rather than in the class’s own
+implemented by any test code that requires it, rather than in the classï¿½s own
 source code. The function is therefore not exported.
 
 __DECLARE_TEST is defined for both debug and release builds. This point is

@@ -40,4 +40,24 @@ add_library(${LIBRARY} ${SOURCE_FILES} ${INCLUDE_FILES})
 set(EPOC_KERNEL_DIR 
     ${CMAKE_CURRENT_SOURCE_DIR}/../../kernel)
 
-target_include_directories(${LIBRARY} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR} ${EPOC_KERNEL_DIR})
+message("INCLUDEDIR:${CMAKE_CURRENT_SOURCE_DIR}/../../include, ${EPOC_KERNEL_DIR}")
+target_include_directories(${LIBRARY} PUBLIC 
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../../include 
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../../include/memmodel/epoc/ 
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../../include/nkern/
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../../include/nkern/arm 
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../../include/kernel 
+                            ${EPOC_KERNEL_DIR})
+
+
+target_compile_definitions(${LIBRARY} PUBLIC
+                                __GCC32__=1 
+                                __MARM__=1
+                                __EABI__=1
+                                __KERNEL_MODE__=1
+                                _WIN32=1)
+
+
+target_compile_options(${LIBRARY} PUBLIC
+                                -fpermissive 
+                                )

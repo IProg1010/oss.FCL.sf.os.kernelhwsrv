@@ -4,8 +4,8 @@ cmake_minimum_required(VERSION 3.20)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
 # Path to toolchain file. This one has to be before 'project()' below
-set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/../../toolchain.cmake)
-set(GIT_HEAD_FILE "${CMAKE_CURRENT_SOURCE_DIR}/.git/HEAD")
+#set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/../../toolchain.cmake)
+#set(GIT_HEAD_FILE "${CMAKE_CURRENT_SOURCE_DIR}/.git/HEAD")
 
 project(kernel_eka C CXX ASM)
 
@@ -40,22 +40,22 @@ set(SOURCE_FILE
 
 add_subdirectory(./drivers)
 #Build the executable based on the source files
-add_executable(${EXECUTABLE} ${SOURCE_FILE})
+#add_executable(${EXECUTABLE} ${SOURCE_FILE})
 
 # List of compiler defines, prefix with -D compiler option
-target_compile_definitions(${EXECUTABLE} PRIVATE
-	-D__DEBUG_MODE__
-	)
+#target_compile_definitions(${EXECUTABLE} PRIVATE
+#	-D__DEBUG_MODE__
+#	)
 
 # List of includ directories
-target_include_directories(${EXECUTABLE} PUBLIC
-	${CMAKE_SOURCE_DIR}/inc
-	${CMAKE_SOURCE_DIR}/
-	)
+#target_include_directories(${EXECUTABLE} PUBLIC
+#	${CMAKE_SOURCE_DIR}/kernel
+#	${CMAKE_SOURCE_DIR}/
+#	)
 
-include_directories(
-	${CMAKE_SOURCE_DIR}/
-	)
+#include_directories(
+#	${CMAKE_SOURCE_DIR}/
+#	)
 
 # Compiler options
 #target_compile_options(${EXECUTABLE} PRIVATE
@@ -104,40 +104,3 @@ include_directories(
 #	-Dformat-default=float
 #	)
 
-add_custom_command(TARGET ${EXECUTABLE}
-	POST_BUILD
-	COMMAND ${CMAKE_SIZE_UTIL} ${EXECUTABLE})
-
-	execute_process(COMMAND git log --pretty=format:'%h' -n 1
-	OUTPUT_VARIABLE GIT_REV
-	ERROR_QUIET)
-
-if ("${GIT_REV}" STREQUAL "")
-	set(GIT_REV "N/A")
-	set(GIT_DIFF "")
-	set(GIT_TAG "N/A")
-	set(GIT_BRANCH "N/A")
-else()
-	execute_process(
-			COMMAND bash -c "git diff --quiet --exit-code || echo +"
-			OUTPUT_VARIABLE GIT_DIFF)
-	execute_process(
-			COMMAND git describe --exact-match --tags
-			OUTPUT_VARIABLE GIT_TAG ERROR_QUIET)
-	execute_process(
-		COMMAND git rev-parse --abbrev-ref HEAD
-		OUTPUT_VARIABLE GIT_BRANCH)
-
-	string(STRIP "${GIT_REV}" GIT_REV)
-	string(SUBSTRING "${GIT_REV}" 1 7 GIT_REV)
-	string(STRIP "${GIT_DIFF}" GIT_DIFF)
-	string(STRIP "${GIT_TAG}" GIT_TAG)
-	string(STRIP "${GIT_BRANCH}" GIT_BRANCH)
-endif()
-
-# Optional: Create hex, bin and S-Record files after the build
-add_custom_command(TARGET ${EXECUTABLE}
-        POST_BUILD
-        COMMAND ${CMAKE_OBJCOPY} -O srec --srec-len=64 ${EXECUTABLE} ${PROJECT_NAME}.s19
-        COMMAND ${CMAKE_OBJCOPY} -O ihex ${EXECUTABLE} ${PROJECT_NAME}.hex
-        COMMAND ${CMAKE_OBJCOPY} -O binary ${EXECUTABLE} ${PROJECT_NAME}_${GIT_REV}.bin)

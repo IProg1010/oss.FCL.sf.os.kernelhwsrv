@@ -35,7 +35,8 @@
 #include <e32const_private.h>
 #include <e32des8_private.h>
 #include <e32event_private.h>
-#include <kernel/heap_hybrid.h>
+//#include <kernel/heap_hybrid.h>
+#include <heap_hybrid.h>
 
 #ifndef __MINIMUM_MACHINE_CODE__
 #ifdef __MARM__
