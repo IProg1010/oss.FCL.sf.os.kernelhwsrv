@@ -39,6 +39,7 @@ set(SOURCE_FILE
 #    )
 
 add_subdirectory(./drivers)
+add_subdirectory(./kernel)
 #Build the executable based on the source files
 #add_executable(${EXECUTABLE} ${SOURCE_FILE})
 

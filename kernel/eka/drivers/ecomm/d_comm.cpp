@@ -1942,7 +1942,8 @@ TInt DChannelComm::DoControl(TInt aFunction, TAny* a1, TAny* a2)
 
 		case RBusDevComm::EControlSetMinTurnaroundTime:
 				{
-				if (a1<0)
+				//if (a1 < 0)
+				if (a1 != 0)
 					a1=(TAny*)0;
 				iTurnaroundMicroSeconds = (TUint)a1;			// save this
 				TUint newTurnaroundMilliSeconds = (TUint)a1/1000;	// convert to ms

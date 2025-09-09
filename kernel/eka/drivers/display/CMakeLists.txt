@@ -7,7 +7,7 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/../../../../toolchain.cmake)
 set(GIT_HEAD_FILE "${CMAKE_CURRENT_SOURCE_DIR}/.git/HEAD")
 
-project(display_eka C CXX ASM)
+project(display C CXX ASM)
 
 #set(PATH_TO_SDK ${CMAKE_SOURCE_DIR}/../../cmsis CACHE PATH "Path to foled with sdk for chip of stm32f1X")
 
