@@ -259,8 +259,8 @@ target_include_directories(${EKERNSMP_LIB_NAME} PUBLIC
                             ${CMAKE_CURRENT_SOURCE_DIR}/../include/nkern/arm 
                             ${CMAKE_CURRENT_SOURCE_DIR}/../include/kernel 
                             ${CMAKE_CURRENT_SOURCE_DIR}/../include/kernel/arm
-                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/dummy_genexec_hr/epoc32/include/platform
-                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/dummy_genexec_hr/epoc32/include/platform/kernel
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/dummy_genexec/epoc32/include/
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/dummy_genexec/epoc32/include/kernel
                             ${EPOC_KERNEL_DIR})
 
 
@@ -269,11 +269,13 @@ target_compile_definitions(${EKERNSMP_LIB_NAME} PUBLIC
                                 __MARM__=1
                                 __EABI__=1
                                 __KERNEL_MODE__=1
-                                _WIN32=1
+                                #_WIN32=1
                                 __EPOC32__=1
                                 __GCC32__=1
                                 __EXPORT_MEMCPY__=1
-                                __IN_KERNEL__=1)
+                                __IN_KERNEL__=1
+                                __REPLACE_GENERIC_UTILS=1
+                                __EXPORT_MEMCPY__=1)
 
 
 target_compile_options(${EKERNSMP_LIB_NAME} PUBLIC

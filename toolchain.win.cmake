@@ -2,7 +2,8 @@ set(CMAKE_SYSTEM_NAME Generic)
 #set(CMAKE_SYSTEM_PROCESSOR RISC-V)
 set(CMAKE_SYSTEM_PROCESSOR ARMV11)
 
-set(TOOLCHAIN_DIR "F:/work/projects/symbian/oss.FCL.sftools.dev.hostenv.cpptoolsplat/mingw-gcc-3.4.5/mingw-symbian-001/bin")
+set(TOOLCHAIN_DIR "A:/work/symbian/oss.FCL.sftools.dev.hostenv.cpptoolsplat/mingw-gcc-3.4.5/mingw-symbian-001/bin")
+#set(TOOLCHAIN_DIR "A:/work/symbian/oss.FCL.sftools.dev.hostenv.cpptoolsplat/mingw-gcc-3.4.5/mingw-symbian-001/bin")
 
 set(BINUTILS_PATH ${TOOLCHAIN_DIR})
 
