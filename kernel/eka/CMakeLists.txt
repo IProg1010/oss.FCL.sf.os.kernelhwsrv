@@ -39,10 +39,10 @@ set(SOURCE_FILE
 #    )
 
 add_subdirectory(./drivers)
+add_subdirectory(./kernel)
 add_subdirectory(./nkernsmp)
 add_subdirectory(./nkern)
 add_subdirectory(./memmodel)
-add_subdirectory(./kernel)
 #Build the executable based on the source files
 #add_executable(${EXECUTABLE} ${SOURCE_FILE})
 

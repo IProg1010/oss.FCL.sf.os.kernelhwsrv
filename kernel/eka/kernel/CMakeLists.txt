@@ -592,41 +592,42 @@ target_compile_options(${EKERNSMP_LIB_NAME} PUBLIC
 
 ################# exstart ##############################
 #/oss.FCL.sf.os.kernelhwsrv/kernel/eka/kernel/exstart.mmp
-#set(EXSTAR_LIB_NAME exstart)
-#set(SOURCE_FILES
-#	exstart.cpp
-#	)
+set(EXSTAR_LIB_NAME exstart_lib)
+set(EXSTAR_EXE_NAME exstart)
+set(SOURCE_FILES
+	exstart.cpp
+	)
 
-#set(INCLUDE_FILES 
-#    ../../kernel/kern_ext.mmh)
+set(INCLUDE_FILES 
+    ../../kernel/kern_ext.mmh)
 
-#add_library(${EXSTAR_LIB_NAME} ${SOURCE_FILES}) # ${INCLUDE_FILES})
-
-#set(EPOC_KERNEL_DIR 
-#   ${CMAKE_CURRENT_SOURCE_DIR}/../../kernel)
+add_library(${EXSTAR_LIB_NAME} ${SOURCE_FILES}) # ${INCLUDE_FILES})
+add_executable(${EXSTAR_EXE_NAME} ${SOURCE_FILES})
+set(EPOC_KERNEL_DIR 
+   ${CMAKE_CURRENT_SOURCE_DIR}/../../kernel)
 
 #message("INCLUDEDIR:${CMAKE_CURRENT_SOURCE_DIR}/../../include, ${EPOC_KERNEL_DIR}")
-#target_include_directories(${EXSTAR_LIB_NAME} PUBLIC 
-#                            ${CMAKE_CURRENT_SOURCE_DIR}/../include 
-#                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/memmodel/epoc/ 
-#                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/nkern/
-#                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/nkern/arm 
-#                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/kernel 
-#                            ${EPOC_KERNEL_DIR})
+target_include_directories(${EXSTAR_LIB_NAME} PUBLIC 
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../include 
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/memmodel/epoc/ 
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/nkern/
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/nkern/arm 
+                            ${CMAKE_CURRENT_SOURCE_DIR}/../include/kernel 
+                            ${EPOC_KERNEL_DIR})
 
 
-#target_compile_definitions(${EXSTAR_LIB_NAME} PUBLIC
-#                                __GCC32__=1 
-#                                __MARM__=1
-#                                __EABI__=1
-#                                __KERNEL_MODE__=1
-#                                _WIN32=1
-#                                __EPOC32__=1)
+target_compile_definitions(${EXSTAR_LIB_NAME} PUBLIC
+                                __GCC32__=1 
+                                __MARM__=1
+                                __EABI__=1
+                                __KERNEL_MODE__=1
+                                _WIN32=1
+                                __EPOC32__=1)
 
 
-#target_compile_options(${EXSTAR_LIB_NAME} PUBLIC
-#                                -fpermissive 
-#                                )
+target_compile_options(${EXSTAR_LIB_NAME} PUBLIC
+                                -fpermissive 
+                                )
 
 ###############################################
 
